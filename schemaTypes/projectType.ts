@@ -27,6 +27,11 @@ export const projectType = defineType({
       type: 'image',
     }),
     defineField({
+      name: 'images',
+      type: 'array',
+      of: [{type: 'image'}],
+    }),
+    defineField({
       name: 'description',
       type: 'string',
       validation: (rule) => rule.required(),
